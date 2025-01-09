@@ -3,6 +3,8 @@ import uvicorn
 data = {'name': "Pedro", 'name2': "Juan"}
 app = FastAPI()
 
-@app.get("/my-first-api")
+@app.get("/datos")
 def hello():
-  return data
+        print("Ingresa tu nombre: ")
+        a = input()
+        print("Hola, " + a)
