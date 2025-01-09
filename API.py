@@ -10,7 +10,7 @@
     "#!pip install uvicorn\n",
     "from fastapi import FastAPI\n",
     "import uvicorn\n",
-    "import os\n",
+    "#import os\n",
     "#import uvicorn\n",
     "#from flask import Flask, jsonify\n",
     "#from threading import Thread"
@@ -18,16 +18,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 4,
    "id": "33283960",
    "metadata": {},
    "outputs": [
     {
      "ename": "SyntaxError",
-     "evalue": "invalid syntax (<ipython-input-1-46a00304db61>, line 10)",
+     "evalue": "invalid syntax (<ipython-input-4-6b0554f159ca>, line 10)",
      "output_type": "error",
      "traceback": [
-      "\u001b[0;36m  Cell \u001b[0;32mIn[1], line 10\u001b[0;36m\u001b[0m\n\u001b[0;31m    uvicorn API:app --host 0.0.0.0 --port 8000\u001b[0m\n\u001b[0m            ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+      "\u001b[0;36m  Cell \u001b[0;32mIn[4], line 10\u001b[0;36m\u001b[0m\n\u001b[0;31m    uvicorn API:app --reload\u001b[0m\n\u001b[0m            ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
      ]
     }
    ],
@@ -41,14 +41,57 @@
     "\n",
     "uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n",
     "\n",
-    "uvicorn API:app --host 0.0.0.0 --port 8000\n",
     "uvicorn API:app --reload"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": null,
+   "id": "4ae160ef",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
    "id": "ab1da4c9",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'app' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[5], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m uvicorn\u001b[38;5;241m.\u001b[39mrun(app, host\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m0.0.0.0\u001b[39m\u001b[38;5;124m\"\u001b[39m, port\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m8000\u001b[39m)\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'app' is not defined"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8b86bb7a",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1b9f96ac",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bf2979f1",
    "metadata": {},
    "outputs": [],
    "source": []
