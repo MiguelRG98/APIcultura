@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 28,
+   "execution_count": 2,
    "id": "8384923d",
    "metadata": {},
    "outputs": [],
@@ -45,31 +45,53 @@
     "def hello():\n",
     "  return data\n",
     "\n",
-    "\n",
-    "# Tomar el puerto de la variable de entorno, si está definida\n",
-    "port = int(os.environ.get(\"PORT\", 8000))\n",
-    "\n",
     "if __name__ == \"__main__\":\n",
-    "    uvicorn.run(app, host=\"0.0.0.0\", port=port)\n",
+    "    uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n",
     "\n",
     "uvicorn API:app --reload"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 25,
+   "execution_count": 3,
    "id": "ab1da4c9",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "1d23fa3e",
    "metadata": {},
    "outputs": [
     {
-     "ename": "SyntaxError",
-     "evalue": "invalid syntax (<ipython-input-25-8fcffc15832e>, line 7)",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[0;36m  Cell \u001b[0;32mIn[25], line 7\u001b[0;36m\u001b[0m\n\u001b[0;31m    uvicorn API:app --reload\u001b[0m\n\u001b[0m            ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
-     ]
+     "data": {
+      "text/plain": [
+       "8000"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
     }
    ],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a5399633",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "fa8dd8fd",
+   "metadata": {},
+   "outputs": [],
    "source": []
   },
   {
@@ -139,11 +161,7 @@
     }
    ],
    "source": [
-    "app = FastAPI()\n",
-    "\n",
-    "@app.get(\"/my-first-api\")\n",
-    "def hello():\n",
-    "  return {\"Hello world!\"}\n"
+    "\n"
    ]
   },
   {
@@ -200,14 +218,7 @@
    "id": "e90362e1",
    "metadata": {},
    "outputs": [],
-   "source": [
-    "#def run_flask():\n",
-    "#    app.run(port=5000, debug=True, use_reloader=False)  # El use_reloader=False evita reiniciar dos veces\n",
-    "#\n",
-    "## Iniciar el servidor Flask en segundo plano\n",
-    "#thread = Thread(target=run_flask)\n",
-    "#thread.start()"
-   ]
+   "source": []
   },
   {
    "cell_type": "code",
