@@ -39,8 +39,6 @@
     "def hello():\n",
     "  return data\n",
     "\n",
-    "uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n",
-    "\n",
     "uvicorn API:app --reload"
    ]
   },
