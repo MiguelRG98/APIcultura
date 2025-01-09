@@ -1,10 +1,11 @@
 from fastapi import FastAPI
 import uvicorn 
-data = {'name': "Pedro", 'name2': "Juan"}
+import pandas as pd
+df = pd.read_csv("datos.csv")
 app = FastAPI()
+
+
 
 @app.get("/datos")
 def hello():
-        print("Ingresa tu nombre: ")
-        a = input()
-        print("Hola, " + a)
+        return df
