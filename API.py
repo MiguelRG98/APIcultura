@@ -18,22 +18,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 29,
+   "execution_count": 1,
    "id": "33283960",
    "metadata": {},
    "outputs": [
     {
-     "ename": "RuntimeError",
-     "evalue": "asyncio.run() cannot be called from a running event loop",
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-1-46a00304db61>, line 10)",
      "output_type": "error",
      "traceback": [
-      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[0;31mRuntimeError\u001b[0m                              Traceback (most recent call last)",
-      "Cell \u001b[0;32mIn[29], line 13\u001b[0m\n\u001b[1;32m     10\u001b[0m port \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mint\u001b[39m(os\u001b[38;5;241m.\u001b[39menviron\u001b[38;5;241m.\u001b[39mget(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mPORT\u001b[39m\u001b[38;5;124m\"\u001b[39m, \u001b[38;5;241m8000\u001b[39m))\n\u001b[1;32m     12\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;18m__name__\u001b[39m \u001b[38;5;241m==\u001b[39m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m__main__\u001b[39m\u001b[38;5;124m\"\u001b[39m:\n\u001b[0;32m---> 13\u001b[0m     uvicorn\u001b[38;5;241m.\u001b[39mrun(app, host\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m0.0.0.0\u001b[39m\u001b[38;5;124m\"\u001b[39m, port\u001b[38;5;241m=\u001b[39mport)\n",
-      "File \u001b[0;32m~/anaconda3/lib/python3.11/site-packages/uvicorn/main.py:579\u001b[0m, in \u001b[0;36mrun\u001b[0;34m(app, host, port, uds, fd, loop, http, ws, ws_max_size, ws_max_queue, ws_ping_interval, ws_ping_timeout, ws_per_message_deflate, lifespan, interface, reload, reload_dirs, reload_includes, reload_excludes, reload_delay, workers, env_file, log_config, log_level, access_log, proxy_headers, server_header, date_header, forwarded_allow_ips, root_path, limit_concurrency, backlog, limit_max_requests, timeout_keep_alive, timeout_graceful_shutdown, ssl_keyfile, ssl_certfile, ssl_keyfile_password, ssl_version, ssl_cert_reqs, ssl_ca_certs, ssl_ciphers, headers, use_colors, app_dir, factory, h11_max_incomplete_event_size)\u001b[0m\n\u001b[1;32m    577\u001b[0m         Multiprocess(config, target\u001b[38;5;241m=\u001b[39mserver\u001b[38;5;241m.\u001b[39mrun, sockets\u001b[38;5;241m=\u001b[39m[sock])\u001b[38;5;241m.\u001b[39mrun()\n\u001b[1;32m    578\u001b[0m     \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[0;32m--> 579\u001b[0m         server\u001b[38;5;241m.\u001b[39mrun()\n\u001b[1;32m    580\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m \u001b[38;5;167;01mKeyboardInterrupt\u001b[39;00m:\n\u001b[1;32m    581\u001b[0m     \u001b[38;5;28;01mpass\u001b[39;00m  \u001b[38;5;66;03m# pragma: full coverage\u001b[39;00m\n",
-      "File \u001b[0;32m~/anaconda3/lib/python3.11/site-packages/uvicorn/server.py:66\u001b[0m, in \u001b[0;36mServer.run\u001b[0;34m(self, sockets)\u001b[0m\n\u001b[1;32m     64\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mrun\u001b[39m(\u001b[38;5;28mself\u001b[39m, sockets: \u001b[38;5;28mlist\u001b[39m[socket\u001b[38;5;241m.\u001b[39msocket] \u001b[38;5;241m|\u001b[39m \u001b[38;5;28;01mNone\u001b[39;00m \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mNone\u001b[39;00m) \u001b[38;5;241m-\u001b[39m\u001b[38;5;241m>\u001b[39m \u001b[38;5;28;01mNone\u001b[39;00m:\n\u001b[1;32m     65\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mconfig\u001b[38;5;241m.\u001b[39msetup_event_loop()\n\u001b[0;32m---> 66\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m asyncio\u001b[38;5;241m.\u001b[39mrun(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mserve(sockets\u001b[38;5;241m=\u001b[39msockets))\n",
-      "File \u001b[0;32m~/anaconda3/lib/python3.11/asyncio/runners.py:186\u001b[0m, in \u001b[0;36mrun\u001b[0;34m(main, debug)\u001b[0m\n\u001b[1;32m    161\u001b[0m \u001b[38;5;250m\u001b[39m\u001b[38;5;124;03m\"\"\"Execute the coroutine and return the result.\u001b[39;00m\n\u001b[1;32m    162\u001b[0m \n\u001b[1;32m    163\u001b[0m \u001b[38;5;124;03mThis function runs the passed coroutine, taking care of\u001b[39;00m\n\u001b[0;32m   (...)\u001b[0m\n\u001b[1;32m    182\u001b[0m \u001b[38;5;124;03m    asyncio.run(main())\u001b[39;00m\n\u001b[1;32m    183\u001b[0m \u001b[38;5;124;03m\"\"\"\u001b[39;00m\n\u001b[1;32m    184\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m events\u001b[38;5;241m.\u001b[39m_get_running_loop() \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m:\n\u001b[1;32m    185\u001b[0m     \u001b[38;5;66;03m# fail fast with short traceback\u001b[39;00m\n\u001b[0;32m--> 186\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mRuntimeError\u001b[39;00m(\n\u001b[1;32m    187\u001b[0m         \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124masyncio.run() cannot be called from a running event loop\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[1;32m    189\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m Runner(debug\u001b[38;5;241m=\u001b[39mdebug) \u001b[38;5;28;01mas\u001b[39;00m runner:\n\u001b[1;32m    190\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m runner\u001b[38;5;241m.\u001b[39mrun(main)\n",
-      "\u001b[0;31mRuntimeError\u001b[0m: asyncio.run() cannot be called from a running event loop"
+      "\u001b[0;36m  Cell \u001b[0;32mIn[1], line 10\u001b[0;36m\u001b[0m\n\u001b[0;31m    uvicorn API:app --host 0.0.0.0 --port 8000\u001b[0m\n\u001b[0m            ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
      ]
     }
    ],
@@ -45,9 +39,9 @@
     "def hello():\n",
     "  return data\n",
     "\n",
-    "if __name__ == \"__main__\":\n",
-    "    uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n",
+    "uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n",
     "\n",
+    "uvicorn API:app --host 0.0.0.0 --port 8000\n",
     "uvicorn API:app --reload"
    ]
   },
